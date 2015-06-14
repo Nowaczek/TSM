@@ -8,6 +8,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+
 
 
 public class koniec extends ActionBarActivity {
@@ -32,6 +35,9 @@ public  Intent score;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_koniec);
 
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
 
         Intent intent2 = getIntent();
